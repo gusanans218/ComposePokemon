@@ -21,6 +21,7 @@ import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import com.example.composepokemon.R
 import com.example.composepokemon.data.remote.responses.PokemonList
+import com.example.composepokemon.ui.theme.JetpackComposePokedexTheme
 
 @Composable
 fun PokemonListScreen(
@@ -49,12 +50,6 @@ fun PokemonListScreen(
             }
         }
     }
-}
-
-@Preview
-@Composable
-fun PreviewScreen(){
-    PokemonListScreen(navController = rememberNavController())
 }
 
 @Composable
