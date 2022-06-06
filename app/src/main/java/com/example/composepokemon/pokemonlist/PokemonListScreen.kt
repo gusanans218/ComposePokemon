@@ -126,6 +126,7 @@ fun PokemonList(
     val endReached by remember{viewModel.endReached}
     val loadError by remember{viewModel.loadError}
     val isLoading by remember{viewModel.endReached}
+    val isSearching by remember{viewModel.isSearching}
 
     LazyColumn(contentPadding = PaddingValues(16.dp)){
         val itemCount = if(pokemonList.size % 2 == 0) {
@@ -134,7 +135,7 @@ fun PokemonList(
             pokemonList.size /2+1
         }
         items(itemCount){
-            if(it >= itemCount - 1 && !endReached && !isLoading){
+            if(it >= itemCount - 1 && !endReached && !isLoading && !isSearching){
                 viewModel.loadPokemonPaginated()
             }
             PokedexRow(rowIndex = it, entries = pokemonList, navController =navController)
