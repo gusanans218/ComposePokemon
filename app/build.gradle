@@ -90,4 +90,8 @@ dependencies {
     implementation "com.google.dagger:hilt-android:2.42"
     kapt 'com.google.dagger:hilt-android-compiler:2.42'
     implementation 'androidx.hilt:hilt-navigation-compose:1.0.0'
+
+    implementation "androidx.compose.runtime:runtime:1.2.0-beta03"
+    implementation "androidx.compose.runtime:runtime-livedata:1.2.0-beta03"
+    implementation "androidx.compose.runtime:runtime-rxjava2:1.2.0-beta03"
 }
